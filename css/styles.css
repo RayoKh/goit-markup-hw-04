@@ -85,6 +85,49 @@ button {
 
 /**
   |============================
+  | Card set Index.html
+  |============================
+*/
+
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+
+.card-set-item {
+  flex-basis: calc(
+    (100% - var(--indent) * (var(--items-index) - 1)) / var(--items-index)
+  );
+}
+
+/**
+  |============================
+  | Card set Portfolio.html
+  |============================
+*/
+
+.project-card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+
+.project-card-set-item {
+  flex-basis: calc(
+    (100% - var(--indent) * (var(--items-portfolio) - 1)) /
+      var(--items-portfolio)
+  );
+}
+
+/**
+  |============================
+  | 
+  |============================
+*/
+
+/**
+  |============================
   | HEADER STYLES
   |============================
 */
@@ -186,7 +229,15 @@ button {
 .hero {
   padding-top: 188px;
   padding-bottom: 188px;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero-image.jpg);
   background-color: var(--grey-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-container {
@@ -257,6 +308,10 @@ button {
   flex-basis: calc((100% - 3 * 24px) / 4);
 }
 
+.features-icons {
+  margin-bottom: 8px;
+}
+
 .features-title {
   font-weight: 500;
   font-size: 20px;
@@ -274,6 +329,7 @@ button {
   line-height: 1.5;
 
   letter-spacing: 0.02em;
+  color: var(--slate-color);
 }
 
 /**
@@ -333,12 +389,6 @@ button {
 .team-container {
 }
 
-.content {
-  flex-grow: 1;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
 .team-title {
   font-size: 36px;
   line-height: 1.11;
@@ -352,6 +402,9 @@ button {
   color: var(--navy-blue-color);
 }
 
+.team-cards {
+}
+
 .team-card {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -359,51 +412,14 @@ button {
   background-color: #fff;
 }
 
-/**
-  |============================
-  | Card set Index.html
-  |============================
-*/
-
-.card-set {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--indent);
-}
-
-.card-set-item {
-  flex-basis: calc(
-    (100% - var(--indent) * (var(--items-index) - 1)) / var(--items-index)
-  );
-}
-
-/**
-  |============================
-  | Card set Portfolio.html
-  |============================
-*/
-
-.project-card-set {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--indent);
-}
-
-.project-card-set-item {
-  flex-basis: calc(
-    (100% - var(--indent) * (var(--items-portfolio) - 1)) /
-      var(--items-portfolio)
-  );
-}
-
-/**
-  |============================
-  | 
-  |============================
-*/
-
 .team-card-img {
   width: 264px;
+}
+
+.content {
+  flex-grow: 1;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .team-card-title {
@@ -424,6 +440,91 @@ button {
   text-align: center;
 
   letter-spacing: 0.02em;
+
+  margin-bottom: 8px;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+.social-item {
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  background-color: var(--iris-color);
+  border-radius: 50%;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--ocean-color);
+}
+
+.social-icon {
+  fill: var(--cloud-color);
+}
+
+.customers {
+}
+.customers-container {
+}
+.customers-title {
+  font-size: 36px;
+  line-height: 1.11;
+
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+
+  margin-bottom: 72px;
+
+  color: var(--navy-blue-color);
+}
+
+.customers-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.customers-item {
+}
+
+.customer-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 168px;
+  height: 88px;
+
+  border: 1px solid var(--light-slate-color);
+  border-radius: 4px;
+}
+
+.customer-link:hover,
+.customer-link:focus {
+  border: 1px solid var(--ocean-color);
+}
+
+.customers-icon {
+  fill: var(--light-slate-color);
+}
+
+.customer-link:hover .customers-icon,
+.customer-link:focus .customers-icon {
+  fill: var(--ocean-color);
 }
 
 /**
@@ -440,6 +541,11 @@ button {
 }
 
 .footer-container {
+  display: flex;
+}
+
+.footer-text {
+  margin-right: 120px;
 }
 
 .footer-logo {
@@ -459,7 +565,7 @@ button {
   color: var(--cloud-color);
 }
 
-.footer-text {
+.footer-descr {
   font-size: 16px;
   line-height: 1.5;
 
@@ -467,6 +573,49 @@ button {
 
   letter-spacing: 0.02em;
   color: var(--cornflower-color);
+}
+
+.footer-social {
+}
+.footer-social-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+
+  margin-bottom: 16px;
+
+  color: #fff;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.footer-social-item {
+}
+
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--green-color);
+}
+
+.footer-social-icon {
+  fill: var(--cloud-color);
 }
 
 /**
