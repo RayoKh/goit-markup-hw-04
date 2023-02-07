@@ -294,11 +294,6 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 24px; */
 }
 
 .features-item {
@@ -306,8 +301,8 @@ button {
 }
 
 .features-wrapper {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  width: 264px;
+  height: 112px;
   margin-bottom: 8px;
   display: flex;
   justify-content: center;
@@ -480,6 +475,12 @@ button {
   fill: var(--cloud-color);
 }
 
+/**
+  |============================
+  |  CUSTOMERS STYLES
+  |============================
+*/
+
 .customers {
 }
 .customers-container {
@@ -502,7 +503,7 @@ button {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 24px;
 }
 .customers-item {
 }
