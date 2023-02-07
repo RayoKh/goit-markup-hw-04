@@ -305,8 +305,17 @@ button {
   flex-basis: calc((100% - 3 * 24px) / 4);
 }
 
-.features-icons {
+.features-wrapper {
+  padding-top: 24px;
+  padding-bottom: 24px;
   margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cloud-color);
+}
+
+.features-icons {
 }
 
 .features-title {
@@ -676,9 +685,8 @@ button {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-.project-card:hover,
-.project-card:active {
-  cursor: pointer;
+.project-card-link:hover,
+.project-card-link:focus {
   border: 1px solid var(--cloud-color);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
